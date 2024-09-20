@@ -1,9 +1,9 @@
 function Cart() {
     return (
-      <section className="cart">
+      <div>
         {/* <button>add items</button> */}
         <button>Checkout</button>
-      </section>
+      </div>
     );
   }
   
