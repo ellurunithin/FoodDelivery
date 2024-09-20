@@ -3,9 +3,9 @@ function FoodItems() {
       <section className="food-items">
         <h2>Food Items</h2>
         <ul>
-          <li>Pizza - $300</li>
-          <li>Burger - $150</li>
-          <li>Pasta - $250</li>
+          <li>Pizza</li>
+          <li>Burger</li>
+          <li>Pasta </li>
         </ul>
       </section>
     );

@@ -3,9 +3,9 @@ function Restaurants() {
       <section className="restaurants">
         <h2>Restaurants</h2>
         <ul>
-          <li>Dominos - Rating: 4.5</li>
-          <li>Burger King - Rating: 4.2</li>
-          <li>Pizza Hut - Rating: 4.0</li>
+          <li>Dominos</li>
+          <li>Burger King</li>
+          <li>Pizza Hut</li>
         </ul>
       </section>
     );
