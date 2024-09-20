@@ -3,8 +3,8 @@ function SearchBar() {
     <div>
       <input type="text" placeholder="Search for food or restaurants" />
       <button>Filter</button>
+      
       </div>
-    // </section>
   );
 }
 

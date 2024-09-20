@@ -1,13 +1,13 @@
 function Restaurants() {
     return (
-      <section className="restaurants">
+      <div>
         <h2>Restaurants</h2>
         <ul>
           <li>Dominos</li>
           <li>Burger King</li>
           <li>Pizza Hut</li>
         </ul>
-      </section>
+      </div>
     );
   }
   
