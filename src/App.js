@@ -1,23 +1,24 @@
-
 import './App.css';
 import Header from './components/Header';
-import SearchBar from './components/Search';
-import Offers from './components/Offers';
-import FoodItems from './components/FoodItems';
-import Restaurants from './components/Restaurants';
-import Cart from './components/Cart';
+import HomePage from './components/HomePage';
 import Footer from './components/Footer';
+import FoodItem from './components/FoodItems';
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
+
 function App() {
-  return (
-    <div><Header />
-      <SearchBar />
-      <Offers />
-      <FoodItems />
-      <Restaurants />
-      <Cart />
-      <Footer />
-      </div>
-  );
+    return (
+        <div className="app-container">
+            <Header />
+            <main className="main-content">
+                <HomePage />
+                <FoodItem/> 
+                <Cart/>
+                <Checkout/>
+            </main>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

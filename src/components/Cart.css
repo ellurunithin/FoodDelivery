@@ -1,0 +1,43 @@
+/* Cart.css */
+.cart {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    gap: 10px; /* Space between items */
+}
+
+.cart-item {
+    background-color: white; /* White background for items */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    padding: 15px; /* Padding for spacing */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space items out */
+    align-items: center; /* Center align items */
+}
+
+.cart-item-name {
+    font-size: 18px; /* Name font size */
+}
+
+.cart-item-price {
+    font-size: 16px; /* Price font size */
+}
+
+.remove-button {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px 12px; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.2s; /* Smooth background change */
+}
+
+.remove-button:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}

@@ -1,0 +1,76 @@
+/* General styles */
+.home {
+  max-width: 1200px; /* Set max width for the content */
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Add padding around the content */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.search-bar {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  margin: 10px 0; /* Add margin above and below */
+}
+
+.search-bar input {
+  width: 80%; /* Set to desired width */
+  padding: 15px; /* Padding for better spacing */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Restaurant list styles */
+.restaurant-list {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+}
+
+.restaurant-card {
+  background-color: white; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Card shadow */
+  overflow: hidden; /* Ensure overflow is hidden */
+  transition: transform 0.2s; /* Smooth transform effect */
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.restaurant-image {
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Cover the area */
+}
+
+.restaurant-name {
+  font-size: 20px; /* Name font size */
+  margin: 10px 0; /* Margin around name */
+  text-align: center; /* Center align */
+}
+
+.restaurant-description {
+  font-size: 14px; /* Description font size */
+  text-align: center; /* Center align */
+  padding: 0 10px; /* Padding for spacing */
+}
+
+.view-menu-button {
+  display: block; /* Block for full width */
+  margin: 10px auto; /* Center align */
+  padding: 10px 15px; /* Padding for button */
+  font-size: 16px; /* Button font size */
+  color: white; /* Text color */
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.2s; /* Smooth background change */
+}
+
+.view-menu-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
