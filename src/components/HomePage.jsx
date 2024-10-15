@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 const restaurants = [
     {
         id: 1,
@@ -35,10 +35,16 @@ const restaurants = [
 ];
 
 const HomePage = () => {
+    const navigate = useNavigate(); // Initialize the navigate function
+
+    const handleViewMenu = (id) => {
+        navigate(`/food-items/${id}`); // Navigate to the FoodItems page with restaurant ID
+    };
+
     return (
         <div className='home'>
-          <div className='search-bar'>
-            <input type='text' placeholder='Search restaurant or food' className="search-bar" />
+            <div className='search-bar'>
+                <input type='text' placeholder='Search restaurant or food' className="search-bar" />
             </div>
             <div className="restaurant-list">
                 {restaurants.map((restaurant) => (
@@ -51,7 +57,7 @@ const HomePage = () => {
                         />
                         <h2 className="restaurant-name">{restaurant.name}</h2>
                         <p className="restaurant-description">{restaurant.description}</p>
-                        <button className="view-menu-button">View Menu</button>
+                        <button className="view-menu-button" onClick={() => handleViewMenu(restaurant.id)}>View Menu</button>
                     </div>
                 ))}
             </div>

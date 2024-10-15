@@ -1,47 +1,59 @@
-import React from 'react';
-import './Cart.css'; // Optional: Include a CSS file for styling
-
-const cartItems = [
-    {
-        id: 1,
-        name: 'Spaghetti Carbonara',
-        price: 12.99
-    },
-    {
-        id: 2,
-        name: 'California Roll',
-        price: 8.99
-    },
-    {
-        id: 3,
-        name: 'Cheeseburger',
-        price: 10.49
-    },
-    {
-        id: 4,
-        name: 'Margherita Pizza',
-        price: 11.99
-    },
-    {
-        id: 5,
-        name: 'Cappuccino',
-        price: 3.99
-    }
-];
+import React, { useContext } from 'react';
+import { CartContext } from './CartContext';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import './Cart.css';
 
 const Cart = () => {
+    const { cartItems, getTotalAmount, increaseQuantity, decreaseQuantity, clearCart, removeItem } = useContext(CartContext);
+    const navigate = useNavigate(); // Initialize navigate for routing
+
     return (
         <div className='cart'>
             <h2>Your Cart</h2>
-            <div className='cart-list'>
-                {cartItems.map((item) => (
-                    <div key={item.id} className='cart-item'>
-                        <h3 className='cart-item-name'>{item.name}</h3>
-                        <p className='cart-item-price'>${item.price.toFixed(2)}</p>
-                        <button className='remove-button'>Remove</button>
+            {cartItems.length === 0 ? (
+                <p>Your cart is empty.</p>
+            ) : (
+                <div>
+                    <ul>
+                        {cartItems.map((item) => (
+                            <li key={item.id}>
+                                {item.name} - ${item.price.toFixed(2)}
+                                <div className="quantity-controls">
+                                    {/* Conditionally render Remove button or - button */}
+                                    {item.quantity === 1 ? (
+                                        <button onClick={() => removeItem(item.id)} className="remove-item-button">
+                                            Remove
+                                        </button>
+                                    ) : (
+                                        <button onClick={() => decreaseQuantity(item.id)} className="decrease-quantity-button">
+                                            -
+                                        </button>
+                                    )}
+                                    <p>{item.quantity}</p>
+                                    <button onClick={() => increaseQuantity(item.id)} className="increase-quantity-button">
+                                        +
+                                    </button>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                    <h3>Total Amount: ${getTotalAmount()}</h3>
+                    <div className="clear-cart-container">
+                        <button className="clear-cart-button" onClick={clearCart}>
+                            Clear Cart
+                        </button>
                     </div>
-                ))}
-            </div>
+                    {/* Checkout button */}
+                    <div className="checkout-container">
+                        <button
+                            className="checkout-button"
+                            onClick={() => navigate('/checkout')} // Navigate to Checkout
+                        >
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

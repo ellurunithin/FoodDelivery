@@ -1,52 +1,96 @@
-/* Checkout.css */
-
 .checkout {
-    padding: 20px; /* Padding around the component */
-    background-color: #f8f9fa; /* Light background color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 400px; /* Max width for the checkout form */
-    margin: 20px auto; /* Center the form horizontally */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    text-align: center; /* Center the heading */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-.checkout-form {
-    display: flex;
-    flex-direction: column; /* Vertical layout */
-    gap: 15px; /* Space between form elements */
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column; /* Stack label and input */
+    margin-bottom: 15px;
 }
 
 label {
-    margin-bottom: 5px; /* Space between label and input */
-    font-weight: bold; /* Bold label text */
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 input, select {
-    padding: 10px; /* Padding for input fields */
-    border: 1px solid #ccc; /* Border style */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.place-order-button {
-    background-color: #007bff; /* Button color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    padding: 10px 15px; /* Padding for button */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.2s; /* Smooth background change */
+button.place-order-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.2s;
 }
 
-.place-order-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+button.place-order-button:hover {
+    background-color: #218838;
+}
+.checkout {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button.place-order-button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button.place-order-button:hover {
+    background-color: #218838;
 }
