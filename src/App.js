@@ -1,19 +1,19 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import HomePage from './components/HomePage';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import HomePage from './components/HomePage/HomePage';
+import Footer from './components/Footer/Footer';
 import FoodItems from './components/FoodItems';
 import Cart from './components/Cart';
-import Checkout from './components/Checkout';
-import { CartProvider } from './components/CartContext'; // Import the CartProvider
-import Contact from './components/Contact';
+import Checkout from './components/Checkout/Checkout';
+import { CartProvider } from './components/Cart/CartContext'; // Import the CartProvider
+import Contact from './components/Footer/Contact';
 // import AddMenuItem from './components/AddMenuItem';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import TermsOfService from './components/TermsOfService';
+import PrivacyPolicy from './components/Footer/PrivacyPolicy';
+import TermsOfService from './components/Footer/TermsOfService';
 import AddRestaurant from './components/AddRestaurant';
 import EditRestaurant from './components/EditRestaurant';
-import { RestaurantProvider } from './components/RestaurantContext';
+import { RestaurantProvider } from './components/HomePage/RestaurantContext';
 
 function App() {
     return (

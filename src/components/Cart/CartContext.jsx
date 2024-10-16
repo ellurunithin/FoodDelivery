@@ -6,7 +6,7 @@ export const CartContext = createContext();
 // Cart Provider Component
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
-
+    
     // Function to add an item to the cart
     const addToCart = (item) => {
         const existingItem = cartItems.find(cartItem => cartItem.id === item.id);

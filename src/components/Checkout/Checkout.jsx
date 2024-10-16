@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from './CartContext'; // Import the useCart hook
 import './Checkout.css';
 
 const Checkout = () => {
     const navigate = useNavigate(); // Initialize the useNavigate hook
+    const { clearCart } = useCart(); // Access the clearCart function from the context
     const [formData, setFormData] = useState({
         name: '',
         address: '',
@@ -19,7 +21,8 @@ const Checkout = () => {
         e.preventDefault();
         alert('Order placed successfully!');
         console.log('Order details:', formData);
-        navigate('/');
+        clearCart(); // Clear the cart
+        navigate('/'); // Redirect to the home page
     };
 
     return (

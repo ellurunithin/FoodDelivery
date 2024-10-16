@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import FoodMenu from './FoodMenu'; // Import the FoodMenu component
+import FoodMenu from './menu/FoodMenu'; // Import the FoodMenu component
 
 const FoodItems = () => {
     const { restaurantId } = useParams(); // Get restaurant ID from URL
