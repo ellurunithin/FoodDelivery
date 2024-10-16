@@ -74,3 +74,54 @@
 .view-menu-button:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
+.add-restaurant-button {
+  display: block; /* Block display for full width */
+  margin: 20px auto; /* Center align with margin */
+  padding: 10px 15px; /* Padding for button */
+  font-size: 16px; /* Button font size */
+  color: white; /* Text color */
+  background-color: #28a745; /* Bootstrap success color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.2s; /* Smooth background change */
+}
+
+.add-restaurant-button:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+.edit-restaurant-button {
+  display: block; /* Block display for full width */
+  margin: 10px auto; /* Center align */
+  padding: 10px 15px; /* Padding for button */
+  font-size: 16px; /* Button font size */
+  color: white; /* Text color */
+  background-color: #007bff; /* Bootstrap warning color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.2s; /* Smooth background change */
+}
+
+.edit-restaurant-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Additional styles for error handling in images */
+.restaurant-image {
+  width: 100%; /* Full width of card */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensure image covers the area */
+  border-radius: 8px 8px 0 0; /* Rounded corners on top */
+}
+
+/* Styling for search bar to ensure consistency */
+.search-bar {
+  margin-bottom: 20px; /* Additional margin at bottom */
+}
+
+.search-bar input {
+  width: 80%; /* Set to desired width */
+  margin: 0 auto; /* Center input */
+}

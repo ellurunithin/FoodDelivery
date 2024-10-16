@@ -8,13 +8,18 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import { CartProvider } from './components/CartContext'; // Import the CartProvider
 import Contact from './components/Contact';
+// import AddMenuItem from './components/AddMenuItem';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
+import AddRestaurant from './components/AddRestaurant';
+import EditRestaurant from './components/EditRestaurant';
+import { RestaurantProvider } from './components/RestaurantContext';
 
 function App() {
     return (
+        <RestaurantProvider>
         <CartProvider>
-            {/* <Router> */}
+        
                 <div className="app-container">
                     <Header />
                     <main className="main-content">
@@ -26,12 +31,19 @@ function App() {
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/privacy" element={<PrivacyPolicy />} />
                             <Route path="/terms" element={<TermsOfService />} />
+                            <Route path='/add-restaurant' element={<AddRestaurant />} />
+                            <Route path='/edit-restaurant/:id' element={<EditRestaurant />} />
+                            {/* <Route path="/add-menu-item" element={<AddMenuItem />} />
+                            <Route path="/edit-menu-item/:id" element={<EditMenuItem />} /> */}
+                            {/* <Route path="/add-food-item" element={<FoodItemForm />} />
+                            <Route path="/edit-food-item/:id" element={<FoodItemForm />} /> For editing */}
                         </Routes>
                     </main>
                     <Footer />
                 </div>
-            {/* </Router> */}
+            
         </CartProvider>
+        </RestaurantProvider>
     );
 }
 
