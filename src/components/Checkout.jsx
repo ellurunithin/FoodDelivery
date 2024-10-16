@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Checkout.css';
 
 const Checkout = () => {
+    const navigate = useNavigate(); // Initialize the useNavigate hook
     const [formData, setFormData] = useState({
         name: '',
         address: '',
@@ -17,6 +19,7 @@ const Checkout = () => {
         e.preventDefault();
         alert('Order placed successfully!');
         console.log('Order details:', formData);
+        navigate('/');
     };
 
     return (
