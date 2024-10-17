@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate for naviga
 import './Cart.css';
 
 const Cart = () => {
-    const { cartItems, getTotalAmount, increaseQuantity, decreaseQuantity, clearCart, removeItem } = useContext(CartContext);
+    // const { cartItems, increaseQuantity, decreaseQuantity } = useContext(CartContext);
+    const { cartItems, increaseQuantity, decreaseQuantity, removeItem, getTotalAmount, clearCart } = useContext(CartContext);
+
     const navigate = useNavigate(); // Initialize navigate for routing
 
     return (

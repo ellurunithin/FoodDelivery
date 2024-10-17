@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+// import { useCart } from './CartContext';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from './CartContext'; // Import the useCart hook
+import { CartContext } from './CartContext'; // Import the CartContext
 import './Checkout.css';
 
 const Checkout = () => {
     const navigate = useNavigate(); // Initialize the useNavigate hook
-    const { clearCart } = useCart(); // Access the clearCart function from the context
+    const { clearCart } = useContext(CartContext); // Access clearCart from the context
     const [formData, setFormData] = useState({
         name: '',
         address: '',
