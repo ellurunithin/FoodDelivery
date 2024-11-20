@@ -1,0 +1,107 @@
+/* Cart.css */
+.cart {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.quantity-controls button:disabled {
+    background-color: #ccc; /* Grey out the button when disabled */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+}
+
+h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Centering the clear cart button */
+.clear-cart-container {
+    display: flex;
+    /* justify-content: center; Centers the button horizontally */
+    margin-top: 20px;
+}
+
+.clear-cart-button {
+    background-color: #dc3545; /* Red color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    /* justify-content: center; */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clear-cart-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+    /* justify-content: center; */
+}
+
+.checkout-container {
+    text-align: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    justify-content: flex-end;
+}
+
+.checkout-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    justify-content: flex-end;
+}
